@@ -37,8 +37,10 @@ buttonTimer.addEventListener("click", (event) => {
 
         // กำหนดให้ alert ผลลัพธ์ และมีปุ่ม refresh 
         if (count >= 0 && count <= 60) {
+          displayCountBox.style.backgroundColor = "red";
           alert(`\nYour point ${count}\nพยายามเข้า`)
         } else if (count > 60) {
+          displayCountBox.style.backgroundColor = "green";
           alert(`\nYour point ${count}\nYou WIN!`)
         }
 
@@ -66,4 +68,3 @@ function randomMath(min, max) {
 // console.log(typeof count)
 
 
-// displayCountBox.style.backgroundColor = "red";
