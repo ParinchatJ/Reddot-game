@@ -4,7 +4,7 @@
 // สุ่มเวลาไหม ?
 // * ลองไปดูว่าแต่ง alert ยังไง
 
-let seconds = Math.floor(Math.random() * 10);
+let seconds = randomMath(5, 11)
 let count = 0;
 
 // DOM
@@ -13,6 +13,7 @@ let buttonReset = document.querySelector(".resetGame");
 let buttonCount = document.querySelector(".countGame");
 let displayTime = document.getElementById("counter");
 let displayCount = document.querySelector(".red-dot p");
+let displayCountBox = document.querySelector(".red-dot")
 
 buttonReset.style.display = "none";
 buttonCount.style.display = "none";
@@ -35,10 +36,10 @@ buttonTimer.addEventListener("click", (event) => {
         buttonReset.style.display = "block";
 
         // กำหนดให้ alert ผลลัพธ์ และมีปุ่ม refresh 
-        if (count >= 0 && count <= 50) {
-          alert(`\nYour point ${count}\n\nพยายามเข้า`)
-        } else if (count > 50) {
-          alert(`Your point ${count}\n\nYou WIN!`)
+        if (count >= 0 && count <= 60) {
+          alert(`\nYour point ${count}\nพยายามเข้า`)
+        } else if (count > 60) {
+          alert(`\nYour point ${count}\nYou WIN!`)
         }
 
       }
@@ -57,4 +58,12 @@ function refresh(){
   window.location.reload();
 }
 
+// random time
+function randomMath(min, max) {
+  return Math.floor(Math.random()* (max-min) + min)
+}
+
 // console.log(typeof count)
+
+
+// displayCountBox.style.backgroundColor = "red";

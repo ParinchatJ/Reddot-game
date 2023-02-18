@@ -13,12 +13,12 @@ body {
     flex-direction: column;
 }
 
-.container h1 {
-    color: seashell;
-    background-color: red;
-    max-width: 600px;
+.container .head {
+    color: #fffff4;
+    background-color: black;
     padding: 20px 50px;
-    filter: drop-shadow(8px 8px 0px #000000);
+    margin-top: 70px;
+    filter: drop-shadow(8px 8px 0px red);
 
     font-family: 'Roboto Mono', monospace;
     letter-spacing: 5px;
@@ -26,13 +26,22 @@ body {
     font-size: 50px;
 }
 
-.container .card #counter {
-    border: none;
-    background-color: #fffff4;
+.container .card {
+    /* border: 0.5px solid black;
+    border-radius: 10px;
+    background-color: tomato; */
+    margin-top: 35px;
+    max-width: 600px;
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.timer {
-    border: 2px solid black;
+.container .card .timer {
+    border: 3px solid black;
     width: 300px;
     height: 100px;
     font-size: 40px;
@@ -42,6 +51,51 @@ body {
     align-items: center;
 }
 
-.startGame {
-    border: 1px solid red;
+.container .card .timer #counter {
+    border: none;
+    /* background-color: #fffff4; */
+}
+
+
+.container .card .button .startGame, .container .card .button .countGame, .container .card .button .resetGame {
+    margin-top: 30px;
+    border-radius: 100px;
+    border: 4px solid black;
+    /* border: none; */
+    background-color: red;
+    color: #fffff4;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 25px;
+    font-weight: 700;
+
+    height: 130px;
+    width: 130px;
+}
+
+.container .card .button .countGame {
+    background-color: greenyellow;
+    color: #000;
+}
+
+.container .card .button .resetGame {
+    background-color: yellow;
+    color: #000;
+}   
+
+.container .card .red-dot {
+    height: 100px;
+    width: 150px;
+    margin: 30px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: aquamarine;
+    filter: drop-shadow(8px 8px 0px #000000);
+}
+
+.container .card .red-dot p {
+    font-size: 50px;
+    margin: 0;
 }
