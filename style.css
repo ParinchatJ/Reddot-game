@@ -55,7 +55,6 @@ body {
 
 .container .card .timer #counter {
     border: none;
-    /* background-color: #fffff4; */
 }
 
 
@@ -100,4 +99,25 @@ body {
 .container .card .red-dot p {
     font-size: 50px;
     margin: 0;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 390px) {
+    .container .head {
+        font-size: 35px;
+        padding: 20px 30px;
+    }
+
+    .container .card .timer {
+        width: 250px;
+        font-size: 35px;
+    }
+    
+    .container .card .red-dot p {
+        font-size: 45px;
+        margin: 0;
+    }
+
+
 }
